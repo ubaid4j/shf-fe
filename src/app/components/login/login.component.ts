@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-    private username : string = 'ubaid';
-    private password : string = 'test123';
-    private isInValid : boolean = false;
+    username : string = null;
+    password : string = null;
+    isInValid : boolean = false;
 
 
-    constructor()
+    constructor(private router : Router)
     {
 
     }
@@ -43,6 +44,18 @@ export class LoginComponent implements OnInit {
         //         this.isInValid = true;
         //     }
         // );
+
+        if(this.username == 'test' && this.password == 'test')
+        {
+            this.isInValid = false;
+            this.router.navigate([this.username, 'odds']);
+            sessionStorage.setItem('user', this.username);
+
+        }
+        else
+        {
+            this.isInValid = true;
+        }
     }
 
 }

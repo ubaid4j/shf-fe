@@ -9,18 +9,18 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li *ngIf="isLoggedIn" class="nav-item">
-                <a class="nav-link" routerLink="/welcome/{{user}}">Home<span class="sr-only">(current)</span></a>
+            <li *ngIf="isLoggedIn()" class="nav-item">
+                <a class="nav-link" routerLink="#">{{currentUser()}}<span class="sr-only">(current)</span></a>
             </li>
-            <li *ngIf="isLoggedIn" class="nav-item">
+            <!-- <li *ngIf="isLoggedIn()" class="nav-item">
                 <a class="nav-link" routerLink="/todos">Todos</a>
-            </li>
+            </li> -->
         </ul>
         <ul class="navbar-nav ml-auto">
-            <li *ngIf="!isLoggedIn" class="nav-item">
+            <li *ngIf="!isLoggedIn()" class="nav-item">
                 <a class="nav-link" routerLink="/login">Login</a>
             </li>
-            <li *ngIf="isLoggedIn" class="nav-item">
+            <li *ngIf="isLoggedIn()" class="nav-item">
                 <a class="nav-link" routerLink="/logout">Logout</a>
             </li>
         </ul>

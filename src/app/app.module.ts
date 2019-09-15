@@ -10,6 +10,8 @@ import { FooterComponent } from './components/partials/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { OddsScreenComponent } from './components/odds-screen/odds-screen.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     FooterComponent,
     LoginComponent,
     PageNotFoundComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    OddsScreenComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

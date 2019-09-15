@@ -21,10 +21,11 @@
     <div id="formContent">
 
         <!-- Login Form -->
-        <div>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In">
+        <div class="content">
+            <div *ngIf="isInValid" class="alert alert-warning">InvalidCredentials</div>
+            <input type="text" id="username" class="fadeIn second" name="login" placeholder="login" [(ngModel)]="username">
+            <input type="password" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="password">
+            <input type="submit" class="fadeIn fourth" value="Log In" (click)="whenClick()">
         </div>
     </div>
 </div>

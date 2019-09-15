@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+    private isLoggedIn : boolean = false;
+    private user : string = "";
 
-  ngOnInit() {
-  }
+    constructor()
+    {
+
+    }
+
+    ngOnInit()
+    {
+    }
 
 }
